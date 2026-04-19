@@ -45,30 +45,15 @@ FileManagerCSharp/
 
 ## How CommandParser works
 
-It splits the input by spaces but handles quoted strings correctly. So something like:
+It splits the input by spaces but handles quoted strings correctly. So something like that:
 
 ```
 create myfile.txt "hello world this is my file"
 ```
 
-...gets parsed as 3 parts, not 8. Without quotes the text would get cut off at the first space.
+...it gets parsed as 3 parts, not 8. Without quotes the text would get cut off at the first space.
 
 ---
-
-## How to run
-
-1. Clone the repo
-2. Open in Visual Studio or use dotnet CLI
-3. Build and run
-
-```bash
-dotnet run
-```
-
-Requires .NET 6 or higher.
-
----
-
 ## Example session
 
 ```
@@ -97,8 +82,8 @@ Attributes --> Archive
 
 ## Notes
 
-- Errors are shown in red so they are easy to spot
-- `rmdir` deletes everything inside the folder too, be careful
+- Errors are shown in red so they are like very easy to spot
+- `rmdir` deletes everything inside the folder too, so be careful
 - `search` goes through all subfolders recursively
 - UTF-8 encoding is set on startup so special characters work fine
 - Command history only lasts for the current session, it resets on exit
